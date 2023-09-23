@@ -1,9 +1,5 @@
 # Task 1
 
-:globe_with_meridians: :rocket: [LIVE APP](http://3.18.207.40/)
-
-**NOTE:** [README First](/README.md)
-
 ### Requirements
 
 - Java
@@ -18,34 +14,24 @@
 - spring-boot-starter-data-mongodb
 - spring-boot-maven-plugin
 
-## Building steps
 
-1. Open the folder `/task1` in your favourite IDE ( VS Code :heart:)
-Wait for few minutes while the IDE loads and completes necessary pre-build tasks.
-
-2. Run `mvn clean install`
-This will build and install the artifacts in to the local repository.
-Required jar file will be created inside `/target` folder.
-
-3. Run the application by clicking `Run` option or pressing `F9`
-SpringBoot application server will load and start on port `8080` of the `localhost`.
 
 ## Rest  API Endpoints and Resources
-Rest API Endpoint is mapped to `http://127.0.0.1:8080/servers/`
+Rest API Endpoint is mapped to `http://127.0.0.1:9090/servers/`
 
-- PUT a server	`http://127.0.0.1:8080/servers/createServer`
+- PUT a server	`http://127.0.0.1:9090/servers/createServer`
 Accept "server" object in body in json format.
 
-- GET servers	`http://127.0.0.1:8080/servers/getServer`
+- GET servers	`http://127.0.0.1:9090/servers/getServer`
 Returns a list of "server" objects.
 
-- GET server	by ID	`http://127.0.0.1:8080/servers/getServer?id=<ID>`
+- GET server	by ID	`http://127.0.0.1:9090/servers/getServer?id=<ID>`
 Returns a  "server" object matching with ID.
 
-- GET servers	by Name	`http://127.0.0.1:8080/servers/getServer?name=<Nmae>`
+- GET servers	by Name	`http://127.0.0.1:9090/servers/getServer?name=<Nmae>`
 Returns a list of "server" objects matching with Name.
 
-- DELETE server	`http://127.0.0.1:8080/servers/deleteServer?id=<ID>`
+- DELETE server	`http://127.0.0.1:9090/servers/deleteServer?id=<ID>`
 Deletes a  "server" object matching with ID.
 
 ## RestController interface extends MongoRepository
@@ -62,52 +48,57 @@ void deleteServerById(String Id);
 List<Server> findByName(String name);
 ```
 
-## Containerizing the app
-
-`Dockerfile` contains all the commands required to build the app image
-
-`
-FROM openjdk:8-alpine
-EXPOSE 8080
-ADD target/demo.jar demo.jar
-ENTRYPOINT ["java", "-Dspring.data.mongodb.uri=mongodb://mongod:27017/servers", "-jar", "/demo.jar"]
-`
-
-1. Run the following command to build docker image
-`sudo docker build -t <container_image_name> .`
-This will create the app container image and add to you local repository.
-
-2. To Run the app from container, run the following command
-`sudo docker run -p 80:80 <container_image_name>`
-SpringBoot application server will load and start on port `8080` of the `localhost`
-You will see application logs in the terminal.
-
-**Note:** The docker-compose part is Documented in Task3
-
-## Consuming APIs
-
 ### Using Postman
 
 Run the following created collection to Test and consume the APIs
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5ff40fbad3968a1b28b0)
-
-**NOTE:** *The above collection is created and tested for `http://127.0.0.1:8080/servers/` endpoint*
+**NOTE:** *The above collection is created and tested for `http://127.0.0.1:9090/servers/` endpoint*
 
 ### Screenshots
 
-![PutPostManIO](/screenshots/putPostManIO.PNG)
+**MongoDb URL and Server Port**
 
-![GetAllServerPostManIO](/screenshots/getAllServerPostManIO.PNG)
+![Screenshot (4)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/807054e4-1f4d-404c-8545-578d2f052bfb)
 
-![GetServByIdPostManIO](/screenshots/getServByIdPostManIO.PNG)
 
-![GetServByNamePostManIO](/screenshots/getServByNamePostManIO.PNG)
+**SpringBoot Framework Started**
 
-![DelPostManIO](/screenshots/delPostManIO.PNG)
+![Screenshot (5)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/a1b72080-9e27-4328-90f8-1d15ec677f2a)
 
-### Using WebUIForms
 
-**NOTE:** *This part is Documented in Task4*
+**POSTMAN - Create Server**
 
-**If run into problem, do not hesitate to comment or connect :smile: !**
+![Screenshot (6)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/b2499168-893c-4096-a736-0b655a60a4b0)
+
+
+**GET Server**
+
+![Screenshot (7)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/01a6f67e-13fa-4c0f-8432-1fb71be00fd4)
+
+
+**GET Server By Id**
+
+![Screenshot (8)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/c547e385-5662-485b-aa16-6eb609697743)
+
+
+**GET Server By Name**
+
+![Screenshot (9)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/246aea26-b333-4fa7-b119-201a8dc002ec)
+
+
+**Delete Server**
+
+![Screenshot (10)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/33632b62-6a16-402f-a37e-514151e50da3)
+
+
+**MongoDB Database**
+
+![Screenshot (11)](https://github.com/neeraj-git-workspace/Kaiburr_Assessment/assets/126611572/1d7e925b-8853-4bc4-b6ef-cf22450143e1)
+
+
+
+
+
+
+
+

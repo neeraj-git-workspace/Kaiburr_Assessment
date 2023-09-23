@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    stages{
+        stage("git checkout") {
+        steps{
+            git 'https://github.com/neeraj-git-workspace/Kaiburr_Assessment.git'
+        }
+        }
+        stage ("image build") {
+            steps  {
+                sh "docker bulid -t neerajkumar/webapp"
+                 }
+        }
+        stage ("images vulernability check") {
+            steps  {
+                sh "trivy --exit-code 1 --severity CRITICAL neerajkumar/webapp:latest"
+                 }
+        }
+
+        stage("docker login & push"){
+            steps{
+                sh "cat /home/dockerpass.txt | docker login --user neerajkumar --password-stdin"
+                sh "docker push neerajkumar/webapp"
+            }
+        }
+                 
+
+        }
+        
+
+         post {
+        success {
+            echo 'CI/CD pipeline successfully completed!'
+        }
+    }
+}
