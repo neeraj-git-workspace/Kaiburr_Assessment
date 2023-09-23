@@ -60,18 +60,4 @@ Run the following created collection to Test and consume the APIs
 
 ### Screenshots
 
-![PutPostManIO](/screenshots/putPostManIO.PNG)
 
-![GetAllServerPostManIO](/screenshots/getAllServerPostManIO.PNG)
-
-![GetServByIdPostManIO](/screenshots/getServByIdPostManIO.PNG)
-
-![GetServByNamePostManIO](/screenshots/getServByNamePostManIO.PNG)
-
-![DelPostManIO](/screenshots/delPostManIO.PNG)
-
-### Using WebUIForms
-
-**NOTE:** *This part is Documented in Task4*
-
-**If run into problem, do not hesitate to comment or connect :smile: !**
