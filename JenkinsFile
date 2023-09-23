@@ -16,16 +16,17 @@ pipeline {
                 sh "trivy --exit-code 1 --severity CRITICAL neerajkumar/webapp:latest"
                  }
         }
-       
-                 
 
-        }
         stage("docker login & push"){
             steps{
                 sh "cat /home/dockerpass.txt | docker login --user neerajkumar --password-stdin"
                 sh "docker push neerajkumar/webapp"
             }
         }
+                 
+
+        }
+        
 
          post {
         success {
