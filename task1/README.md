@@ -1,7 +1,5 @@
 # Task 1
 
-**NOTE:** [README First](/README.md)
-
 ### Requirements
 
 - Java
