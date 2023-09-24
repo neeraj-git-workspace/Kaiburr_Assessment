@@ -1,11 +1,11 @@
-**DATA SCIENCE - TASK6**
+# **DATA SCIENCE - TASK6**
 ***
 # CONSUMER COMPLAINT TEXT CLASSIFICATION
 
 ## Overview
 
  This project aims to classify consumer complaints into different categories using text classification techniques. 
- **
+ 
  The dataset used is available [here](https://catalog.data.gov/dataset/consumer-complaint-database) 
 
 # Steps to Follow
@@ -20,21 +20,25 @@
   * Remove special characters.
   * Tokenize the text.
   * Convert text data to numerical form using TF-IDF or other techniques.
+***
 **Step 3: Selection of Multi-Classification Model**
 * Choose a classification algorithm:
   * Decision Tree.
   * Naive Bayes
   * K Nearest Neighbour
 * Train the selected model(s) on preprocessed data.
+***
 **Step 4: Comparison of Model Performance**
 * Evaluate model performance using metrics like accuracy, precision, recall, F1-score.
 * Implement cross-validation to assess generalization.
+***
 **Step 5: Model Evaluation**
 * From the graph Decision Tree outperfromed the classification task
+***
 **Step 6: Prediction and Documentation**
 * Make predictions on new or test data.
 * Create a GitHub repository for the project.
-
+***
 ## SCREENSHOTS
 
 **Explanatory Data Analysis**
