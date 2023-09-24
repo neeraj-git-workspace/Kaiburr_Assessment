@@ -13,6 +13,7 @@
 * Load the dataset.
 * Perform EDA to understand the data.
 * Create relevant features for text classification.
+***
 **Step 2: Text Pre-Processing**
 * Clean and preprocess the text data:
   * Remove special characters.
