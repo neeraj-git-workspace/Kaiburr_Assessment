@@ -2,6 +2,10 @@
 
 ## CONSUMER COMPLAINT TEXT CLASSIFICATION
 
+## Overview
+
+This project aims to classify consumer complaints into different categories using text classification techniques. The dataset used is available [here](https://catalog.data.gov/dataset/consumer-complaint-database)
+
 ## SCREENSHOTS
 
 **Explanatory Data Analysis**
